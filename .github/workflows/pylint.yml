@@ -3,7 +3,8 @@ name: PyLint
 on:
   pull_request:
     branches: 
-      - '$BRANCH'
+      - '!master'
+      - '*' 
 
 jobs:
   lint:
@@ -21,5 +22,3 @@ jobs:
         use-black: false
         use-mypy: false
         use-isort: false
-      env:
-        BRANCH: ${{ github.head_ref }}
