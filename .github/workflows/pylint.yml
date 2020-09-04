@@ -1,6 +1,9 @@
 name: PyLint
 
-on: [pull_request]
+on:
+  pull_request:
+    branches: 
+      - $BRANCH
 
 jobs:
   lint:
@@ -11,5 +14,12 @@ jobs:
     - uses: actions/checkout@v1
     - uses: ricardochaves/python-lint@master
       with:
-        python-root-list: 'src/src'
+        python-root-list: 'src'
         use-pylint: true
+        use-pycodestyle: false
+        use-flake8: false
+        use-black: false
+        use-mypy: false
+        use-isort: false
+      env:
+        BRANCH: ${{ github.head_ref }}
