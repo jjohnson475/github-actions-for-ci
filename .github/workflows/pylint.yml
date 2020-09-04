@@ -3,7 +3,7 @@ name: PyLint
 on:
   pull_request:
     branches: 
-      - $BRANCH
+      - '$BRANCH'
 
 jobs:
   lint:
