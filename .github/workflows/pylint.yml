@@ -13,7 +13,7 @@ jobs:
       with:
         python-root-list: 'src'
         use-pylint: true
-        extra-pylint-options: -d=C0305
+        extra-pylint-options: --disable=C0305
         use-pycodestyle: false
         use-flake8: false
         use-black: false
