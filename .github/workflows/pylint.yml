@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: ricardochaves/python-lint@$GITHUB_REF
+    - uses: ricardochaves/python-lint@master
       with:
         python-root-list: 'src'
         use-pylint: true
