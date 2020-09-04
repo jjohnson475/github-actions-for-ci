@@ -1,10 +1,10 @@
 name: PyLint
 
 on:
-  push:
+  pull_request:
      branches: 
        - '*'
-       - '!master'
+       - '!master' 
 
 jobs:
   lint:
@@ -22,3 +22,4 @@ jobs:
         use-black: false
         use-mypy: false
         use-isort: false
+        
