@@ -2,7 +2,7 @@ name: PyLint
 
 on:
   push:
-    branches: 
+     branches: 
        - '*'
        - '!master'
 
