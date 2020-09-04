@@ -2,6 +2,8 @@ name: PyLint
 
 on:
   push:
+    branches: 
+      - $BRANCH
 
 jobs:
   lint:
@@ -19,3 +21,5 @@ jobs:
         use-black: false
         use-mypy: false
         use-isort: false
+      env:
+        BRANCH: ${{ github.head_ref }}
